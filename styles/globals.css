@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #090a0c;
+}
+
+.section-title h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #d9832e;
+  width: 50px;
+  height: 2px;
+}
+
+.feature-grp:hover svg {
+  fill: #fff;
+}
+
+.field-input input:focus + span,
+.field-input textarea:focus + span {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.custom-bouncedown {
+  animation: bouncedown 1.2s linear infinite;
+}
+
+.progress-animate {
+  animation-duration: 0.55s;
+  animation-timing-function: ease;
+}
+
+.progress-92 {
+  animation-name: progressAnimation92;
+}
+
+.progress-75 {
+  animation-name: progressAnimation75;
+}
+
+.progress-86 {
+  animation-name: progressAnimation86;
+}
+
+.progress-88 {
+  animation-name: progressAnimation88;
+}
+
+@keyframes bouncedown {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    top: 15px;
+    opacity: 1;
+  }
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+
+@keyframes progressAnimation92 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 92%;
+  }
+}
+
+@keyframes progressAnimation75 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes progressAnimation86 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 86%;
+  }
+}
+
+@keyframes progressAnimation88 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 88%;
+  }
+}
