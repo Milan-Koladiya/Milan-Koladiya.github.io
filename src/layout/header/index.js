@@ -7,7 +7,7 @@ const menuItems = [
     { href: "#about", link: "about us" },
     { href: "#services", link: "services" },
     { href: "#work", link: "portfolio" },
-    { href: "#blog", link: "blog" },
+    // { href: "#blog", link: "blog" },
     { href: "#contactus", link: "contact" }
 ];
 

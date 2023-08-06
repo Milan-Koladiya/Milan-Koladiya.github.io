@@ -6,12 +6,15 @@ import aboutUs from "../../assets/images/about-us.jpg";
 import facebook from "../../assets/images/facebook.svg";
 import twitter from "../../assets/images/twitter.svg";
 import linkedin from "../../assets/images/linkedin.svg";
+import upwork from "../../assets/images/upwork.svg";
+import github from "../../assets/images/github.svg";
+import freelancer from "../../assets/images/freelancer.svg";
 
 export const socialIcons = [
-    { href: "https://www.upwork.com/freelancers/~01ef5c2f98cbf17208", icon: facebook, width: 9, height: 16 },
-    { href: "https://www.freelancer.in/u/milankoladiya001", icon: facebook, width: 9, height: 16 },
-    { href: "https://github.com/Milan-Koladiya", icon: twitter, width: 15, height: 15 },
-    { href: "https://www.linkedin.com/in/milan-koladiya", icon: linkedin, width: 14, height: 14 },
+    { href: "https://www.upwork.com/freelancers/~01ef5c2f98cbf17208", icon: upwork, width: 18, height: 16 },
+    { href: "https://www.freelancer.in/u/milankoladiya001", icon: freelancer, width: 20, height: 16 },
+    { href: "https://github.com/Milan-Koladiya", icon: github, width: 23, height: 15 },
+    { href: "https://www.linkedin.com/in/milan-koladiya", icon: linkedin, width: 15, height: 14 },
 ];
 
 const myInfo = [
@@ -29,16 +32,16 @@ const AboutMe = () => {
     return (
         <div id="about" className="relative bg-[#eaedf2] py-[60px] md:py-[100px]">
             <div className="container mx-auto px-15">
-                <SectionTitle title="about me" desc="A Lead UX & UI designer based in Canada" />
+                <SectionTitle title="about me" desc="A Lead Fullstack Developer based in India" />
                 <div className="grid grid-cols-1 xmd:grid-cols-12 mt-[35px] items-center">
                     <div className="xmd:col-span-5 my-[15px]">
                         <div className="shadow-light rounded-[5px] relative bg-white p-[14px]">
                             <Image src={aboutUs} alt="about" />
                             <div className="absolute top-8 left-[6px] bg-white p-2 flex flex-col">
                                 {socialIcons?.map((icons, index) =>
-                                    <Link href={icons?.href} key={index} className="w-[34px] h-[34px] bg-primary text-white hover:bg-dark flex items-center justify-center my-[3px]">
+                                    <a href={icons?.href} target="_blank" key={index} className="w-[34px] h-[34px] bg-primary text-white hover:bg-dark flex items-center justify-center my-[3px]">
                                         <Image src={icons?.icon} alt="social" width={icons?.width} height={icons?.height} />
-                                    </Link>
+                                    </a>
                                 )}
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 import AboutMe from "@/src/components/aboutMe";
 import GetInTouch from "@/src/components/getInTouch";
 import Introduction from "@/src/components/introduction";
-import LatestBlogs from "@/src/components/latestBlogs";
+// import LatestBlogs from "@/src/components/latestBlogs";
 import LatestWorks from "@/src/components/latestWorks";
 import MyServices from "@/src/components/myServices";
 import MySkills from "@/src/components/mySkills";
@@ -16,7 +16,7 @@ export default function Home() {
       <MyServices />
       <LatestWorks />
       <Testimonials />
-      <LatestBlogs />
+      {/* <LatestBlogs /> */}
       <GetInTouch />
     </div>
   )
