@@ -1,16 +1,17 @@
 import React, { Fragment, useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { Dialog, Transition } from '@headlessui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+
+import linkIcon from "../../assets/images/link.svg";
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 const PortfolioDialog = ({ isOpen, setIsOpen, selectedPortfolio }) => {
-    const { href, img, title, des, techStack, fullDes } = selectedPortfolio;
+    const { href, img, title, techStack, fullDes } = selectedPortfolio;
     const [activeIndex, setActiveIndex] = useState(0);
-
-    console.log("img ===> ", img);
 
     return (
         <Transition appear show={isOpen} as={Fragment}>
@@ -43,7 +44,10 @@ const PortfolioDialog = ({ isOpen, setIsOpen, selectedPortfolio }) => {
                                     className="text-lg font-semibold leading-[1.2] flex items-center justify-between px-6 py-8"
                                 >
                                     {title}
-                                    <i className="fa-solid fa-circle-xmark cursor-pointer" onClick={() => setIsOpen(false)}></i>
+                                    <a href={href} target='_blank' className='relative group cursor-pointer outline-none mx-6'>
+                                        <Image src={linkIcon} alt="move" />
+                                        <span className='tooltip-text py-1 px-3 absolute left-[50%] -translate-x-2/4 -bottom-[26px] bg-[#555] text-white font-semibold text-[11px] opacity-0 group-hover:opacity-100 rounded-[6px] whitespace-nowrap'>Go to live site</span>
+                                    </a>
                                 </Dialog.Title>
                                 <div className="h-[calc(100vh-100px)] md:h-[calc(90vh-100px)] overflow-auto px-6">
                                     <Swiper navigation={true} modules={[Navigation]} onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} className="portfolio-swiper">

@@ -28,6 +28,17 @@ body {
   left: 0;
 }
 
+.tooltip-text::after{
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
